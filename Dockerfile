@@ -4,6 +4,9 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY . /usr/src/app
-RUN gem install --no-cache-dir-r requirements.txt
+RUN gem install sinatra
+
+EXPOSE 3000
 
 CMD ["ruby", "app.rb"]
+
